@@ -5,16 +5,20 @@ import {
   FaDatabase, FaGithub, FaLinkedin 
 } from 'react-icons/fa';
 import { SiVite, SiC, SiWireshark } from 'react-icons/si';
+import profileImg from '../assets/pfp.jpg';
 
 const BentoGrid = () => {
     return (
         <div className="bento-container">
             <div className="bento-item area-1">
-                <div className="hero-content">
+                <div className="hero-text">
                     <h2>Hi, I'm Nathan <span className="wave">👋</span></h2>
                     <p>NSCC IT Student & Developer based in Halifax, Nova Scotia.</p>  
                 </div>
-                
+
+                <div className="hero-img-container">
+                    <img src={profileImg} alt="Nathan Lambourne" className="profile-img" />
+                </div>
             </div>
 
             <div className="bento-item area-2">
@@ -49,6 +53,7 @@ const BentoGrid = () => {
                     <div className="icon-box" data-tooltip="Linux"><FaLinux size={32} color="#FCC624" /></div>
                     <div className="icon-box" data-tooltip="Docker"><FaDocker size={32} color="#2496ED" /></div>
                     <div className="icon-box" data-tooltip="Wireshark"><SiWireshark size={32} color="#1679A7" /></div>
+                    <div className="icon-box" data-tooltip="Vite"><SiVite size={32} color="#646CFF" /></div>
                 </div>
             </div>
 
@@ -66,7 +71,7 @@ const BentoGrid = () => {
 
             <div className="bento-item area-5">
                 <h3>About Me</h3>
-                <p>I build clean, efficient code and I love the gym.</p>
+                <p>I write clean, efficient code and I love the gym.</p>
             </div>
         </div>
     );
