@@ -1,4 +1,5 @@
 import Navbar from './components/Navbar'
+import BentoGrid from './components/BentoGrid';
 
 function App() {
   return (
@@ -6,7 +7,7 @@ function App() {
       <Navbar />
 
       <main className="bento-grid">
-        <h1>Welcome to my portfolio</h1>
+        <BentoGrid />
       </main>
     </div>  
   )
