@@ -1,3 +1,5 @@
+import { useState } from 'react';
+import Modal from './Modal';
 import './BentoGrid.css';
 import { 
   FaReact, FaJs, FaCss3Alt, FaHtml5, 
@@ -8,6 +10,15 @@ import { SiVite, SiC, SiWireshark } from 'react-icons/si';
 import profileImg from '../assets/pfp.jpg';
 
 const BentoGrid = () => {
+    const [isModalOpen, setIsModalOpen] = useState(false);
+
+    const portfolioProject = {
+        title: 'Portfolio Website',
+        description: 'This is current portfolio you are viewing. It is built with React, Vite, and CSS Grid. Features a responsive Bento layout, dark mode, and custom animations.',
+        tags: ['React', 'JavaScript', 'CSS', 'Vite', 'Netlify'],
+        github: 'https://github.com/NathanGit18/portfolio-v2'
+    };
+
     return (
         <div className="bento-container">
             <div className="bento-item area-1">
@@ -21,7 +32,10 @@ const BentoGrid = () => {
                 </div>
             </div>
 
-            <div className="bento-item area-2">
+            <div className="bento-item area-2 project-card"
+            onClick={() => setIsModalOpen(true)}
+            style={{ cursor: 'pointer' }}
+            >
                 <h3>Featured Project</h3>
                 <p>Portfolio</p>
 
@@ -32,6 +46,7 @@ const BentoGrid = () => {
                     <span className="tag">Vite</span>
                     <span className="tag">Netlify</span>
                 </div>
+                
             </div>
 
             <div className="bento-item area-3">
@@ -73,6 +88,13 @@ const BentoGrid = () => {
                 <h3>About Me</h3>
                 <p>I write clean, efficient code and I love the gym.</p>
             </div>
+
+            <Modal 
+                isOpen={isModalOpen} 
+                onClose={() => setIsModalOpen(false)} 
+                project={portfolioProject} 
+            />
+
         </div>
     );
 };
