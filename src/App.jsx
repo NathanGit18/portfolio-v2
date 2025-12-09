@@ -1,5 +1,6 @@
 import Navbar from './components/Navbar'
 import BentoGrid from './components/BentoGrid';
+import Capabilities from './components/Capabilities';
 
 function App() {
   return (
@@ -9,6 +10,8 @@ function App() {
       <main className="bento-grid">
         <BentoGrid />
       </main>
+
+      <Capabilities />
     </div>  
   )
 }

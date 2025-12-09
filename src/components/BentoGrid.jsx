@@ -66,12 +66,12 @@ const BentoGrid = () => {
             >
             <div className="project-badge">Featured</div>
             <div className="project-content">
-                <h3>Portfolio V2</h3>
+                <h3>Portfolio</h3>
                 <p>Built with React & Vite</p>
                 <div className="tags">
                     <span className="tag">React</span>
                     <span className="tag">Vite</span>
-                    <span className="tag">CSS Grid</span>
+                    <span className="tag">CSS</span>
                 </div>
             </div>
             </motion.div>
@@ -91,6 +91,7 @@ const BentoGrid = () => {
                 <div className="icon-box" data-tooltip="Linux"><FaLinux size={28} color="#FCC624" /></div>
                 <div className="icon-box" data-tooltip="Docker"><FaDocker size={28} color="#2496ED" /></div>
                 <div className="icon-box" data-tooltip="Wireshark"><SiWireshark size={28} color="#1679A7" /></div>
+                <div className="icon-box" data-tooltip="Vite"><SiVite size={28} color="#646CFF" /></div>
             </div>
             </motion.div>
 
