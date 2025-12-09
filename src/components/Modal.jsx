@@ -14,8 +14,6 @@ const Modal = ({ isOpen, onClose, project }) => {
 
     if (!isOpen) return null;
 
-    console.log("Modal Project Data:", project);
-
     return (
         <div className="modal-overlay" onClick={onClose}>
             <div className="modal-content" onClick={(e) => e.stopPropagation()}>

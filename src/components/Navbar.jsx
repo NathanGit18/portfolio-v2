@@ -1,13 +1,13 @@
 import './Navbar.css';
 import { FaGithub, FaLinkedin } from 'react-icons/fa';
-import { HiDownload } from 'react-icons/hi'; // Import a download icon
+import { HiDownload } from 'react-icons/hi'; 
 
 const Navbar = () => {
   return (
     <nav className="navbar">
       {/* Brand / Logo */}
       <span className="logo">
-        Nate.dev
+        Nathan Lambourne
       </span>
 
       {/* Right Side: Socials + Resume */}

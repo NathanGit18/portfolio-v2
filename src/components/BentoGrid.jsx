@@ -15,7 +15,7 @@ const BentoGrid = () => {
 
     const portfolioProject = {
         title: 'Portfolio Website',
-        description: 'This is the current portfolio you are viewing. It is built with React, Vite, and CSS Grid. Features a responsive Bento layout, dark mode, and custom animations.',
+        description: 'This is the current portfolio you are viewing. It is built with React, Vite, and CSS. It features a responsive Bento layout, dark mode, and custom animations.',
         tags: ['React', 'JavaScript', 'CSS', 'Vite', 'Netlify'],
         github: 'https://github.com/NathanGit18/portfolio-v2'
     };
@@ -64,7 +64,7 @@ const BentoGrid = () => {
             onClick={() => setIsModalOpen(true)}
             style={{ cursor: 'pointer' }}
             >
-            <div className="project-badge">Featured</div>
+            <div className="project-badge">Featured Project</div>
             <div className="project-content">
                 <h3>Portfolio</h3>
                 <p>Built with React & Vite</p>
@@ -98,7 +98,7 @@ const BentoGrid = () => {
             {/* Area 5: About Me (Middle Center) */}
             <motion.div className="bento-item area-5" variants={itemVariants}>
             <h3>About Me</h3>
-            <p>I build clean, efficient code and I love the gym.</p>
+            <p>I build clean, efficient code and I love to workout.</p>
             </motion.div>
 
             {/* Area 4: Status (Bottom Center) */}
