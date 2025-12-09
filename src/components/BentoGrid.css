@@ -50,6 +50,122 @@
     grid-row: span 1;
 }
 
+.icon-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 4 columns looks tighter */
+  gap: 1.2rem;
+  margin-top: 1.5rem;
+}
+
+.icon-box {
+  position: relative; /* Needed for tooltip positioning */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.5rem;
+  border-radius: 12px;
+  background-color: rgba(255,255,255,0.03); /* Subtle backing for each icon */
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+
+.icon-box:hover {
+  background-color: rgba(255,255,255,0.1);
+  transform: translateY(-2px);
+}
+
+.icon-box::after {
+  content: attr(data-tooltip); 
+  
+  position: absolute;
+  bottom: 110%; 
+  left: 50%;
+  transform: translateX(-50%) scale(0.8); 
+  
+  background-color: #0f172a; 
+  color: #fff;
+  padding: 0.4rem 0.8rem;
+  border-radius: 6px;
+  font-size: 0.75rem;
+  white-space: nowrap; 
+  opacity: 0;          
+  pointer-events: none; 
+  transition: all 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55); 
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.5);
+  border: 1px solid rgba(255,255,255,0.1);
+  z-index: 10;
+}
+
+.icon-box:hover::after {
+  opacity: 1;
+  transform: translateX(-50%) scale(1); 
+  bottom: 125%; 
+}
+
+.social-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.social-links {
+  display: flex;
+  gap: 1.5rem;
+  margin-top: 1rem;
+}
+
+.social-btn {
+  color: var(--text-primary);
+  transition: color 0.3s ease, transform 0.2s ease;
+}
+
+.social-btn:hover {
+  color: var(--accent);
+  transform: scale(1.1); 
+}
+
+.wave {
+  display: inline-block;
+  animation: wave-animation 2.5s infinite;
+  transform-origin: 70% 70%;
+}
+
+@keyframes wave-animation {
+    0% { transform: rotate( 0.0deg) }
+   10% { transform: rotate(14.0deg) }
+   20% { transform: rotate(-8.0deg) }
+   30% { transform: rotate(14.0deg) }
+   40% { transform: rotate(-4.0deg) }
+   50% { transform: rotate(10.0deg) }
+   60% { transform: rotate( 0.0deg) }
+  100% { transform: rotate( 0.0deg) }
+}
+
+.tags {
+    display: flex;
+    gap: 0.5rem;
+    margin-top: 1rem;
+}
+
+.tag {
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 0.25rem 0.75rem;
+    border-radius: 999px; 
+    font-size: 0.75rem;
+    color: var(--text-secondary);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+
+.project-content {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: center;
+}
+
 @media (max-width: 768px) {
   .bento-container {
     grid-template-columns: 1fr; 
