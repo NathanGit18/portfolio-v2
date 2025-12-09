@@ -14,7 +14,7 @@ const BentoGrid = () => {
 
     const portfolioProject = {
         title: 'Portfolio Website',
-        description: 'This is current portfolio you are viewing. It is built with React, Vite, and CSS Grid. Features a responsive Bento layout, dark mode, and custom animations.',
+        description: 'This is the current portfolio you are viewing. It is built with React, Vite, and CSS Grid. Features a responsive Bento layout, dark mode, and custom animations.',
         tags: ['React', 'JavaScript', 'CSS', 'Vite', 'Netlify'],
         github: 'https://github.com/NathanGit18/portfolio-v2'
     };
@@ -72,15 +72,11 @@ const BentoGrid = () => {
                 </div>
             </div>
 
-            <div className="bento-item area-4 social-box">
-                <h3>Connect</h3>
-                <div className="social-links">
-                    <a href="https://github.com/NathanGit18" target="_blank" rel="noopener noreferrer" className="social-btn">
-                        <FaGithub size={28} />
-                    </a>
-                    <a href="https://linkedin.com/in/nathanldev" target="_blank" rel="noopener noreferrer" className="social-btn">
-                        <FaLinkedin size={28} />
-                    </a>
+            <div className="bento-item area-4 status-box">
+                <h3>Status</h3>
+                <div className="status-indicator">
+                    <span className="pulsing-dot"></span>
+                    <p>Open to Work</p>
                 </div>
             </div>
 

@@ -2,50 +2,86 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 100%;             
-  max-width: 1200px;       
-  height: var(--nav-height);
-  padding: 0 1.5rem;       
-  background: rgba(15, 23, 42, 0.8); 
-  backdrop-filter: blur(10px);       
-  position: sticky;        
+  
+  /* Layout & Positioning */
+  width: 100%;
+  max-width: 1200px;
+  height: var(--nav-height); /* Defined in index.css */
+  padding: 0 1.5rem;
+  
+  /* Glassmorphism */
+  background: rgba(15, 23, 42, 0.6); /* Slightly more transparent */
+  backdrop-filter: blur(12px);
+  position: sticky;
   top: 0;
   z-index: 100;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
 }
 
 .logo {
   font-size: 1.25rem;
-  font-weight: 700;
+  font-weight: 800;
   color: var(--text-primary);
-  text-decoration: none;
   letter-spacing: -0.5px;
 }
 
-.nav-links {
+.nav-actions {
   display: flex;
-  gap: 1.5rem;  
-  list-style: none;
+  align-items: center;
+  gap: 1.2rem;
 }
 
-.nav-link {
-  text-decoration: none;
+/* Social Icons */
+.social-icon {
   color: var(--text-secondary);
-  font-size: 0.95rem;
-  font-weight: 500;
-  transition: color 0.2s ease;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
 }
 
-.nav-link:hover {
-  color: var(--accent);
+.social-icon:hover {
+  color: var(--text-primary);
+  transform: translateY(-2px);
 }
 
-@media (max-width: 600px) {
-  .navbar {
-    padding: 0 1rem;
-  }
+/* Vertical Divider Line */
+.separator {
+  width: 1px;
+  height: 24px;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Resume Button */
+.resume-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
   
-  .nav-links {
-    gap: 1rem;
-    font-size: 0.85rem;
+  background-color: rgba(255, 255, 255, 0.1);
+  color: var(--text-primary);
+  
+  padding: 0.5rem 1rem;
+  border-radius: 999px; /* Pill shape */
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.resume-btn:hover {
+  background-color: var(--accent); /* Your Blue color */
+  color: #0f172a; /* Dark text on button */
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(56, 189, 248, 0.2); /* Blue glow */
+}
+
+/* Mobile Tweak */
+@media (max-width: 600px) {
+  .resume-btn span {
+    display: none; /* Hide text "Resume" on tiny screens, show only icon */
+  }
+  .resume-btn {
+    padding: 0.5rem;
   }
 }

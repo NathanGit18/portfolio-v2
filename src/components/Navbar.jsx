@@ -1,25 +1,56 @@
 import './Navbar.css';
+import { FaGithub, FaLinkedin } from 'react-icons/fa';
+import { HiDownload } from 'react-icons/hi'; // Import a download icon
 
 const Navbar = () => {
-    return (
-        <nav className="navbar">
-            <a href="/" className="logo">
-                Nathan Lambourne
-            </a>
+  return (
+    <nav className="navbar">
+      {/* Brand / Logo */}
+      <span className="logo">
+        Nate.dev
+      </span>
 
-            <ul className="nav-links">
-                <li>
-                    <a href="#about" className="nav-link">About</a>
-                </li>
-                <li>
-                    <a href="#projects" className="nav-link">Projects</a>
-                </li>
-                <li>
-                    <a href="#contact" className="nav-link">Contact</a>
-                </li>
-            </ul>
-        </nav>
-    );
+      {/* Right Side: Socials + Resume */}
+      <div className="nav-actions">
+        
+        {/* Social Icons */}
+        <a 
+          href="https://github.com/NathanGit18" 
+          target="_blank" 
+          rel="noreferrer" 
+          className="social-icon"
+          aria-label="GitHub"
+        >
+          <FaGithub size={24} />
+        </a>
+
+        <a 
+          href="https://linkedin.com/in/nathanldev" 
+          target="_blank" 
+          rel="noreferrer" 
+          className="social-icon"
+          aria-label="LinkedIn"
+        >
+          <FaLinkedin size={24} />
+        </a>
+
+        {/* Separator Line */}
+        <div className="separator"></div>
+
+        {/* Resume Button */}
+        <a 
+          href="/Resume.pdf" 
+          target="_blank" 
+          rel="noopener noreferrer"
+          className="resume-btn"
+        >
+          <HiDownload size={18} />
+          <span>Resume</span>
+        </a>
+
+      </div>
+    </nav>
+  );
 };
 
-export default Navbar
+export default Navbar;
